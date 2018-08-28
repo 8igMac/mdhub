@@ -1,6 +1,5 @@
 工作日誌
 ===
-[toc]
 
 ## 2018-08-13
 :::info
@@ -108,4 +107,4 @@ night 18:00~
 3. 1 v-bird
 :::
 
-afternoon 13:40~ 
+afternoon 13:40
