@@ -1,6 +1,5 @@
 Effective C++ Note
 ===
-[TOC]
 
 # Deducing Type
 ## Item 1: Understand Template Type Deduction

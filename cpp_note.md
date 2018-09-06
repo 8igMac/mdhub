@@ -1,6 +1,16 @@
-C++
+Modern C++
 ===
-[TOC]
+
+# stream
+- istream <- ifstream, istringstream
+- ostream <- ofstream, ostringstream
+
+# constexpr
+- object: const and its value can be known in compile time.
+- function: 'can' produce compile time known result if its argument are also compile time known.
+- constexpr permit cout, can use non-type template function to print
+
+# lambda function
 
 # Namespace
 Namespaces provide a method for preventing name conflicts in large projects. 
@@ -21,26 +31,6 @@ move constructor
 ## if-it-has-a-name 原則
 - Rvalue reference 屬於lvalue如果他有名子
 - Rvalue reference 屬於rvalue如果他沒有名子
-
-## constexpr
-- object: const and its value can be known in compile time.
-- function: 'can' produce compile time known result if its argument are also compile time known.
-- constexpr permit cout, can use non-type template function to print
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 # STL
 ## Container
