@@ -1,12 +1,18 @@
 Git
 ===
 
-If you want to look up any command, there are good documentation on manual page and good example too.
-```
-$ man git command
-```
+If you want to look up any command, there are good documentation on manual page and good example too, use `$ man git COMMAND`
 
-# Begining a repository
+## Table of content
+- [Begining a repository](#begin)
+- [Developing workflow](#workflow)
+- [Reset](#reset)
+- [Merging](#merge)
+- [Handling a merge(pull) request](#merge_request)
+- [Merge develop branch to master branch](#merge_master)
+- [Squash two commit or edit old commit message](#edit_cmt_mesg) 
+
+## <a name="begin"></a>Begining a repository 
 1. Init git.
 ```
 $ git init
@@ -39,7 +45,7 @@ Use command `git remote -v` to check current remote setting. (fetch: download, p
 $ git push origin master
 ```
 
-# Developing workflow
+## <a name="workflow"></a>Developing workflow
 1. Before you start working, sync your **local repo** to the **remote repo**.
 ```
 $ git pull origin master
@@ -61,7 +67,7 @@ $ git commit -m "COMMIT MESSAGE"
 $ git push origin master
 ```
 
-# Reset
+## <a name="reset"></a>Reset
 - From staging area to unstage
 ```
 $ git reset 
@@ -75,7 +81,7 @@ $ git reset --soft HEAD^
 $ git reset --hard HEAD^
 ```
 
-# Merging
+## <a name="merge"></a>Merging
 1. Checkout to main branch
 ```
 $ git chekcout main_branch
@@ -85,7 +91,7 @@ $ git chekcout main_branch
 $ git merge --no-ff topic_branch
 ```
 
-# Handling a merge(pull) request
+## <a name="merge_request"></a>Handling a merge(pull) request
 1. Fetch and check out the branch for this merge request
 ```
 $ git fetch origin
@@ -102,7 +108,7 @@ $ git merge --no-ff target_branch
 $ git push origin master
 ```
 
-# Merge develop branch to master branch
+## <a name="merge_master"></a>Merge develop branch to master branch
 On local, before sending merge(pull) request
 1. Checkout to master
 2. Create topic branch on master
@@ -112,7 +118,7 @@ On local, before sending merge(pull) request
 6. Push develop branch to origin/develop
 7. Send merge(pull) request on remote repo
 
-# Squash two commit or edit old commit message
+## <a name="edit_cmt_mesg"></a> Squash two commit or edit old commit message
 ```
 $ git rebase -i HEAD~3  # view last 3 commit
 ```
