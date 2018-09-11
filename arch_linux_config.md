@@ -1,10 +1,30 @@
 Arch Linux
 ===
-[Toc]
 
+### Table of content
+- [Bluetooth](#bluetooth)
+    - [Bluetooth speaker](#bluetooth_speaker) 
+    - [Reference](#bluetoothctl_ref)
+- [Multi Monitor](#multi_monitor)
+    - [VGA](#multi_monitor_vga)
+    - [Reference](#multi_monitor_ref)
+- [Mount USB drive](#mount_usb)
+    - [Use Built-in Tool](#mount_usb_builtin)
+    - [Use udisks](#mount_usb_udisks)
+- [Key Binding](#key_bind) 
+    - [Backlight](#key_bind_backlight)
+    - [Volumn](#key_bind_volumn)
+- [Useful Applications](#apps)
+    - [Screen Lock](#screen_lock)
+    - [Chinese Font](#chinese_font)
+    - [Screenshot](#screenshot)
+
+
+<a name="bluetooth"></a>
 # Bluetooth 
 
-## Bluetooth speaker
+<a name="bluetooth_speaker"></a>
+## Bluetooth Speaker
 1. Start the `bluetoothctl` interactive command
 ```
 $ bluetoothctl
@@ -38,14 +58,17 @@ $ connect MAC_ADDRESS
 $ disconnect MAC_ADDRESS
 ```
 
-## reference
+<a name="bluetoothctl_ref"></a>
+## Reference
 - [Bluetooth headset](https://wiki.archlinux.org/index.php/Bluetooth_headset)
 - [Bluetooth](https://wiki.archlinux.org/index.php/bluetooth#Using_your_computer.27s_speakers_as_a_bluetooth_headset)
 
 
-# Multi Monitor
+<a name="multi_monitor"></a>
+# Multi Monitor 
 
-## VGA
+<a name="multi_monitor_vga"></a>
+## VGA 
 1. Show available device
 ```
 $ xrandr
@@ -67,15 +90,18 @@ $ xrandr --addmode DEVICE MODE_NAME
 $ xrandr --output DEVICE --mode MODE_NAME
 ```
 
-## Reference
+<a name="multi_monitor_ref"></a>
+## Reference 
 [xrandr: Adding undetected resolution](https://wiki.archlinux.org/index.php/Xrandr#Adding_undetected_resolutions)
 [Multihead: configure using xrandr](https://wiki.archlinux.org/index.php/Multihead#Configuration_using_xrandr)
 
 
-# Mount USB drive
+<a name="mount_usb"></a>
+# Mount USB Drive
 DEVICE_PARTITION(ex: sdb2)
 
-## Use build-in tool
+<a name="mount_usb_builtin"></a>
+## Use Built-in Tool
 1. Check device name
 ```
 $ lsblk -f
@@ -93,6 +119,7 @@ $ mount /dev/DEVICE_PARTITION /mnt/MNT_POINT
 $ umount /dev/DECIVE_PARTITION
 ```
 
+<a name="mount_usb_udisks"></a>
 ## Use udisks
 1. Check device name
 ```
@@ -112,6 +139,7 @@ $ udisksctl power-off -b /dev/DEVICE_PARTITION
 ```
 
 
+<a name="key_bind"></a>
 # Key Binding 
 > see [arch_wiki/xbindkeys](https://wiki.archlinux.org/index.php/Xbindkeys)
 1. intall **xbindkeys**
@@ -120,18 +148,14 @@ $ udisksctl power-off -b /dev/DEVICE_PARTITION
 $ xbindkeys -d > ~/.xbindkeysrc
 ```
 4. set the config file
-:::info
-**Tip:** Use `xbindkey -k` to find keycodes for a particular key
-:::
-:::success
-**Tip:** After you made a change, execute `xbindkeys -p` to reload the configuration file and apply the changes.
-:::
-:::success
-**Tip:** To apply the change permanently, add `xbindkey` in _~/.xinitrc_ before starting your windows manager.
-:::
+> **Tip:** Use `xbindkey -k` to find keycodes for a particular key
 
+> **Tip:** After you made a change, execute `xbindkeys -p` to reload the configuration file and apply the changes.
 
-## backlight
+> **Tip:** To apply the change permanently, add `xbindkey` in _~/.xinitrc_ before starting your windows manager.
+
+<a name="key_bind_backlight"></a>
+## Backlight
 > see [arch_wiki/backlight/xbacklight](https://wiki.archlinux.org/index.php/backlight#xbacklight)
 1. install **xorg-xbacklight**
 2. set backlight dir for xbacklight in _/etc/X11/xorg.conf_
@@ -153,7 +177,7 @@ EndSection
   F86MonBrightnessDown
 ```
 
-
+<a name="key_bind_volumn"></a>
 ## Volumn
 1. install **alsamixer**
 2. add keybinding in _~/.xbindkeysrc_
@@ -171,12 +195,14 @@ EndSection
 "amixer -c 1 set Master toggle;amixer -c 1 set Headphone toggle; amixer -c 1 set Speaker toggle"
   F86AudioMute
 ```
-:::info
-**Info:** amixer `-c` option is for selecting sound cards index
-:::
+> **Info:** amixer `-c` option is for selecting sound cards index
 
 
-# Screen Lock
+<a name="apps"></a>
+# Useful Applications
+
+<a name="screen_lock"></a>
+## Screen Lock
 I use **i3lock** for i3wm to lock screen
 1. install from source
 2. to execute
@@ -185,10 +211,10 @@ $ i3lock
 ```
 3. type your password to unlock
 
-
-# Chinese font
+<a name="chinese_font"></a>
+## Chinese Font
 [ttf-tw](https://aur.archlinux.org/packages/ttf-tw/): 台灣教育部的字體
 
-
-# Screenshot
+<a name="screenshot"></a>
+## Screenshot
 [deepin-screenshot](https://www.deepin.org/en/original/deepin-screenshot/)
