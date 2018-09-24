@@ -1,7 +1,6 @@
 OOP - SOLID principles
 ===
-{%youtube VUvEDg30FyY %}
-[Toc]
+> [talk source](https://www.youtube.com/watch?v=VUvEDg30FyY)
 
 ## Single responsibility 
  **_Code should be one and only one reason to change_**

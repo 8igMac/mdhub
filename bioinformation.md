@@ -20,7 +20,7 @@ PL2mpR0RYFQsBiCWVJSvVAO3OJ2t7DzoHA) to watch.
         - [Use Dynamic Programming and Edit Distance](#dynamic_prog)
     - [ToDo](#todo)
 - [Assembly](#assembly)
-    - [Shortest Common Suffix](#short_common_superstring)
+    - [Shortest Common Suffix](#shortest-common-suffix)
         - [Naive Solution](#scs_naive)
         - [Overlaps Graph Based - Greedy Solution](#scs_greedy)
     - [De Bruijn Graph Based - Eulerian Walk](#de_bruijn)
