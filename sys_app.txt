@@ -1,0 +1,47 @@
+
+======================================
+		Application available
+======================================
+
+# markdown view
+grip -b MARDOWFILE.md
+
+# Adjust volumn
+alsamixer -> sound card: HDA intel PCH
+
+# pdf reader 
+evince FILENAME
+
+# file manager
+ranger
+
+# urxvt color config
+urxvt config
+
+# set wallpaper
+feh --bg-scale /path/to/image.file
+
+# mount usb
+Check device name with: lsblk -f
+Create mount point: mkdir /mnt/usbstick
+Mount device: mount /dev/sdb /mnt/usbstick
+To umount: umount /dev/sdb
+
+# screenshot tool
+deepin-screenshot
+
+# youtube downloader (install from pip)
+youtube-dl
+
+ 
+======================================
+			Todo list
+======================================
+# set up firewall
+
+# terminal opacity
+
+# polybar config
+
+
+
